@@ -20,7 +20,7 @@ function loadData() {
     $greeting.text('So, you want to live at ' + address + '?');
 
     // YOUR CODE GOES HERE!
-    var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=640x400&location='+ address + '';
+    var streetviewUrl = 'https://maps.googleapis.com/maps/api/streetview?size=640x400&location='+ address + '';
     /*$showcaseElem.append('<img class="ars" src="' + streetviewUrl + '">');*/
     $showcaseElem.html('<img class="ars" src="' + streetviewUrl + '">');
     
@@ -41,7 +41,7 @@ function loadData() {
     });
 */
 
-    var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
+    var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
     $.ajax({
       url: wikiUrl,
       dataType: "jsonp",
